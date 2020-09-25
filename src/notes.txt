@@ -1,0 +1,55 @@
+
+General:
+•Respect the Model-View-Controller design pattern.
+•Automated build withMaven.
+•Annotation based user input validation.
+
+Hero:
+• Create Hero or Load Hero
+  -> Should be able to see all stats in both scenarios (name, class, level, xp, att, def, hp)
+Stats are affected by artifacts (Types: weapon increases dmg, armor increases def, helmet increases hp)
+
+Villain:
+
+Map:
+• The hero needs to navigate a square map with the size calculated by the formula (level-1)*5+10-(level%2)
+• The initial position of the hero is in the center of the map.
+• He wins the game if he reaches on of the borders of the map. Each turn he can move one position in one of the 4 four directions: North, South, East, West
+
+Combat:
+• When a map is generated, villains of varying power will be spread randomly over the map.
+• When a hero moves to a position occupied by a villain, the hero has 2 options:
+  -> Fight, which engages him in a battle with the villain
+  -> Run, which gives him a 50% chance of returning to the previous position. If the odds are not on his side, he must fight the villain
+• You will need to simulate the battle between the hero and monster and present the user the outcome of the battle
+• If a hero looses a battle, he dies and also looses the mission.If a hero wins a battle, he gains:
+  -> Experience points, based on the villain power. Of course, he will level up if he reaches the next level experience.
+  -> An artifact, which he can keep or leave. Of course, winning a battle does not guarantee that an artifact will be dropped and the quality of the artifact also
+      varies depending on the villain’s strength.
+• Leveling up is based on the following formula level*1000+(level−1)2*450.
+
+• The game can be launched in 2 modes as described below.
+  -> $java -jar swingy.jar console
+  -> $java -jar swingy.jar gui
+• A user’s heroes and their state will be preserved, when the user exits the game, in a text file. When starting the game, your program will load the heroes from this file
+
+Validation:
+• You will need to integrate a third party library in your project in order to provide annotation based validation.
+• We highly recommend that you use a library that implements the javax.validation specification.
+• You will not allow any abnormal user input to disrupt the game behaviour.
+• Validation failure will be highlighted to the user
+
+Bonus:
+• You persist the user’s heroes in a relational database, instead of a text file. (PostgreSQL)
+• You can switch between console view and GUI view at runtime, without closing the game. (Easy)
+
+
+
+
+
+
+
+
+
+
+

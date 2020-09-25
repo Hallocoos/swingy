@@ -1,0 +1,36 @@
+Static? Hero:
+  • Hero name
+  • Hero class
+  • Level
+  • Experience
+  • Total Attack (Base + Bonus)
+  • Total Defense (Base + Bonus)
+  • Total Hit Points (Base + Bonus)
+  • Base Attack
+  • Base Defense
+  • Base Hit Points
+
+Artifact:
+  • Artifact type
+  • Bonus Attack
+  • Bonus Defense
+  • Bonus Hit Points
+
+
+
+
+Villain:
+  • String Villain name
+  • String Villain class
+  • int Villain
+  • int Experience
+  • int Attack
+  • int Defense
+  • int Hit Points
+
+Map:
+
+Combat:
+
+Menu:
+

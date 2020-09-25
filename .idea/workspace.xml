@@ -1,44 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a310d48-4e72-49f6-adbf-281669eb4bbb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bd6c57f6-dd05-4ca9-bf5f-bb4a45ba209c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\plugins\maven\lib\maven3" />
+        <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1hGvc6EBoJ2ZW7uX5tGhKttF6BR" />
+  <component name="ProjectId" id="1hH0UhHzzFoZkyHxQeVuIcIHoe6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,44 +35,163 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean jar:jar" />
+      <command value="mvn clean compile" />
+      <command value="mvn jar:jar" />
+      <command value="mvn exec:java" />
+      <command value="mvn clean compile jar:jar" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Maven.maven sucks">
+    <configuration name="Swingy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Swingy.Swingy" />
+      <module name="Swingy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Swingy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Swingy-1.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/Swingy-1.jar" />
+      <option name="PROGRAM_PARAMETERS" value="gui" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
+    <configuration name="maven sucks" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+                <option value="&amp;" />
+                <option value="java" />
+                <option value="-jar" />
+                <option value="target/Swingy-1.jar" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Swingy" />
+      <item itemvalue="JAR Application.Swingy-1.jar" />
+      <item itemvalue="Maven.maven sucks" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.Swingy-1.jar" />
+        <item itemvalue="Application.Swingy" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5a310d48-4e72-49f6-adbf-281669eb4bbb" name="Default Changelist" comment="" />
-      <created>1599650320510</created>
+      <changelist id="bd6c57f6-dd05-4ca9-bf5f-bb4a45ba209c" name="Default Changelist" comment="" />
+      <created>1599652731273</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1599650320510</updated>
-      <workItem from="1599650323157" duration="376000" />
+      <updated>1599652731273</updated>
+      <workItem from="1599652732584" duration="848000" />
+      <workItem from="1599653643295" duration="313000" />
+      <workItem from="1599653995940" duration="8241000" />
+      <workItem from="1599732117940" duration="5485000" />
+      <workItem from="1600073589611" duration="9632000" />
+      <workItem from="1600246505441" duration="198000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="WindowStateProjectService">
+    <state x="414" y="174" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600086406505">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" width="1092" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1680.38.1680.1010@0.0.1920.1040" timestamp="1600086406505" />
+    <state x="722" y="220" key="#com.intellij.ide.util.MemberChooser" timestamp="1599745285841">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="722" y="220" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1680.38.1680.1010@0.0.1920.1040" timestamp="1599745285841" />
+    <state x="588" y="208" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1599655130134">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="588" y="208" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040/-1680.38.1680.1010@0.0.1920.1040" timestamp="1599655130134" />
+    <state x="743" y="384" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1599652880065">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="743" y="384" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/-1680.38.1680.1010@0.0.1920.1040" timestamp="1599652880065" />
+    <state x="170" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600081148029">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="170" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1680.38.1680.1010@0.0.1920.1040" timestamp="1600081148029" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600081486966">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/-1680.38.1680.1010@0.0.1920.1040" timestamp="1600081486966" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1600086534878">
+      <screen x="-1680" y="38" width="1680" height="1010" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1680.38.1680.1010@-1680.38.1680.1010" timestamp="1600086534878" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1680.38.1680.1010@0.0.1920.1040" timestamp="1600086442986" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1600086534877">
+      <screen x="-1680" y="38" width="1680" height="1010" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1680.38.1680.1010@-1680.38.1680.1010" timestamp="1600086534877" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1680.38.1680.1010@0.0.1920.1040" timestamp="1600086442986" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1600086534877">
+      <screen x="-1680" y="38" width="1680" height="1010" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1680.38.1680.1010@-1680.38.1680.1010" timestamp="1600086534877" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1680.38.1680.1010@0.0.1920.1040" timestamp="1600086442986" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1600086534877">
+      <screen x="-1680" y="38" width="1680" height="1010" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1680.38.1680.1010@-1680.38.1680.1010" timestamp="1600086534877" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1680.38.1680.1010@0.0.1920.1040" timestamp="1600086442986" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1600082979591">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1680.38.1680.1010@0.0.1920.1040" timestamp="1600082979591" />
+    <state x="242" y="136" width="1676" height="1028" key="dock-window-1" timestamp="1600081609792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="242" y="136" width="1676" height="1028" key="dock-window-1/0.0.1920.1040/-1680.38.1680.1010@0.0.1920.1040" timestamp="1600081609792" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1600085591405">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/-1680.38.1680.1010@0.0.1920.1040" timestamp="1600085591405" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/swingy$Swingy.ic" NAME="Swingy Coverage Results" MODIFIED="1600083134674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Swingy.*</FILTER>
+    </SUITE>
   </component>
 </project>
