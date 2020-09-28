@@ -28,6 +28,7 @@ public class GameController {
 
     public boolean loadHero(String heroName) {
         hero = this.gameSaveHandler.loadHero(heroName);
+        System.out.println(hero);
         if (hero != null) {
             System.out.println(hero);
             generateMap(hero.getLevel());

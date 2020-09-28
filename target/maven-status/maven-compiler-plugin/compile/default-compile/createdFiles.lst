@@ -10,6 +10,7 @@ view\NewGameGUI$1.class
 view\NewGameGUI.class
 view\MainMenuGUI.class
 view\LoadGameGUI$1.class
+model\Logger.class
 model\GameSaveHandler.class
 Swingy\Swingy.class
 view\GUIController.class

@@ -21,12 +21,12 @@ public class LoadGameGUI extends JPanel {
 
         tfCharacterName.setColumns(5);
 
+        this.add(tfCharacterName);
         this.add(btnLoadChar);
         this.add(btnBack);
 
         btnLoadChar.addActionListener(actions);
         btnBack.addActionListener(actions);
-        this.add(tfCharacterName);
 
         setVisible(true);
         setSize(400, 400);
@@ -47,7 +47,7 @@ public class LoadGameGUI extends JPanel {
 
     public void loadHero() {
         if (gameController.loadHero(tfCharacterName.getText())) {
-            ConsoleGUI consoleGUI = new ConsoleGUI(gameController, 1);
+            guiController.displayGameGUI(gameController);
         }
     }
 

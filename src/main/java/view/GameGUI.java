@@ -5,7 +5,7 @@ import java.awt.event.*;
 import controller.GameController;
 
 public class GameGUI extends JPanel {
-    private JButton btnNorth, btnSouth, btnWest, btnEast, btnBack;
+    private JButton btnNorth, btnSouth, btnWest, btnEast, btnBack, btnFight, btnRun;
     private GUIController guiController;
     private GameController gameController;
 
@@ -18,18 +18,25 @@ public class GameGUI extends JPanel {
         btnEast = new JButton("West");
         btnWest = new JButton("East");
         btnBack = new JButton("Back");
+        btnFight = new JButton("Fight");
+        btnRun = new JButton("Run");
 
         this.add(btnNorth);
         this.add(btnSouth);
         this.add(btnEast);
         this.add(btnWest);
         this.add(btnBack);
+        this.add(btnFight);
+        this.add(btnRun);
+
 
         btnNorth.addActionListener(actions);
         btnSouth.addActionListener(actions);
         btnEast.addActionListener(actions);
         btnWest.addActionListener(actions);
         btnBack.addActionListener(actions);
+        btnFight.addActionListener(actions);
+        btnRun.addActionListener(actions);
 
         setVisible(true);
         setSize(400, 400);
