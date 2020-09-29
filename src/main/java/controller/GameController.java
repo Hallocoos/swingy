@@ -28,17 +28,12 @@ public class GameController {
 
     public boolean loadHero(String heroName) {
         hero = this.gameSaveHandler.loadHero(heroName);
-        System.out.println(hero);
         if (hero != null) {
             System.out.println(hero);
             generateMap(hero.getLevel());
             return true;
         }
         return false;
-    }
-
-    public void deleteHero(String heroName) {
-        this.gameSaveHandler.deleteHero(heroName);
     }
 
     public boolean moveHero(String move) {
@@ -58,8 +53,7 @@ public class GameController {
         }
         this.gameSaveHandler.saveHero(hero);
         if (this.map[hero.getX()][hero.getY()] == 2)
-            if (!event())
-                return false;
+            return event();
         return true;
     }
 
@@ -101,53 +95,12 @@ public class GameController {
         System.out.flush();
         System.out.print("\033[H\033[2J");
         System.out.println("You have run into an enemy. What do you want to do?\nf) Fight\nr) Run");
-        int max = 10;
-        int min = 3;
-        int randomInt = (int) (Math.random() * (max - min + 1) + min);
-        int randomDeath = (int) (Math.random() * (100 - 1 + 1) + 1);
         String line = scanner.nextLine();
+        int randomInt = (int) (Math.random() * (10 - 1 + 1) + 10);
         if (line.equalsIgnoreCase("f")) {
-            if (randomDeath == 1) {
-                if (hero.getLevel() == 5) {
-                    gameSaveHandler.deleteHero(hero.getName());
-                    System.out.flush();
-                    System.out.print("\033[H\033[2J");
-                    System.out.println("You have beat the game!");
-                    System.out.println("Insert any text to continue!");
-                    line = scanner.nextLine();
-                    return false;
-                }
-            }
-            if (randomInt <= 1) {
-                System.out.println("You picked up an artifact that boosts your Hitpoints!");
-                hero.incrementCurrentHitpoints(5);
-            } else if (randomInt <= 2) {
-                System.out.println("You picked up an artifact that boosts your Defence!");
-                hero.incrementDefence(5);
-            } else if (randomInt <= 3) {
-                System.out.println("You picked up an artifact that boosts your Attack!");
-                hero.incrementAttack(5);
-            }
-            this.map[hero.getX()][hero.getY()] = 0;
-            System.out.println("Insert any text to continue!");
-            line = scanner.nextLine();
-            saveHero(hero);
-            if (hero.incrementExperience(50)) {
-                hero.setX(0);
-                hero.setY(0);
-                generateMap(hero.getLevel());
-            }
-            if (hero.getLevel() == 5) {
-                gameSaveHandler.deleteHero(hero.getName());
-                System.out.flush();
-                System.out.print("\033[H\033[2J");
-                System.out.println("You have beat the game!");
-                System.out.println("Insert any text to continue!");
-                line = scanner.nextLine();
-                return false;
-            }
+            return fight();
         } else if (line.equalsIgnoreCase("r")) {
-            if (randomInt <= 3) {
+            if (randomInt <= 1) {
                 gameSaveHandler.deleteHero(hero.getName());
                 System.out.flush();
                 System.out.print("\033[H\033[2J");
@@ -166,5 +119,63 @@ public class GameController {
         } else
             event();
         return true;
+    }
+
+    public int formulaForDamage(int attack, int defense) {
+        return (int)((float)attack * ((100 - (float)defense) / (100)));
+    }
+
+    public boolean fight() {
+        int randomInt = (int) (Math.random() * (10 - 1 + 1) + 10);
+        int villianAttack = (int) (Math.random() * (7 - 3 + 1) + 7);
+        int villianHealth = (int) (Math.random() * (10 - 5 + 1) + 10);
+        int villianDefense = (int) (Math.random() * (3 - 1 + 1) + 3);
+        while (hero.getCurrentHitpoints() > 0 && villianHealth > 0) {
+            hero.setCurrentHitpoints(hero.getCurrentHitpoints() - formulaForDamage(villianAttack, hero.getDefense()));
+            villianHealth = villianHealth - (formulaForDamage(hero.getAttack(), villianDefense));
+        }
+        if (hero.getCurrentHitpoints() > villianHealth) {
+            if (hero.getLevel() == 5) {
+                gameSaveHandler.deleteHero(hero.getName());
+                System.out.flush();
+                System.out.print("\033[H\033[2J");
+                System.out.println("You have beat the game!");
+                System.out.println("Insert any text to continue!");
+                String line = scanner.nextLine();
+                return false;
+            } else
+                System.out.println("You have won the fight!");
+            if (randomInt <= 1) {
+                System.out.println("You picked up an artifact that boosts your Hitpoints!");
+                hero.incrementCurrentHitpoints(5);
+            } else if (randomInt <= 2) {
+                System.out.println("You picked up an artifact that boosts your Defence!");
+                hero.incrementDefence(5);
+            } else if (randomInt <= 3) {
+                System.out.println("You picked up an artifact that boosts your Attack!");
+                hero.incrementAttack(5);
+            }
+            hero.setCurrentHitpoints(hero.getTotalHitpoints());
+            System.out.println("You rest and regain all of your hitpoints!");
+            this.map[hero.getX()][hero.getY()] = 0;
+            if (hero.incrementExperience(50)) {
+                generateMap(hero.getLevel());
+            }
+            saveHero(hero);
+            String line = scanner.nextLine();
+            return true;
+        } else {
+            gameSaveHandler.deleteHero(hero.getName());
+            System.out.flush();
+            System.out.print("\033[H\033[2J");
+            System.out.println("You have died!");
+            System.out.println("Insert any text to continue!");
+            String line = scanner.nextLine();
+            return false;
+        }
+    }
+
+    public void generateVillian() {
+
     }
 }

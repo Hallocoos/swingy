@@ -22,7 +22,7 @@ public class GameSaveHandler {
             out.writeObject(hero);
             out.close();
             fileOut.close();
-            System.out.printf("Serialized data is saved in save.txt\n");
+            // System.out.printf("Serialized data is saved in save.txt\n");
         } catch (IOException i) {
             i.printStackTrace();
         }
@@ -66,12 +66,12 @@ public class GameSaveHandler {
         File saveFile = new File("heroes\\" + heroName + ".txt");
         String path = saveFile.getAbsolutePath();
         if (saveFile.delete()) {
-            System.out.println(path + " has been deleted.");
-            System.out.println("Press any key to continue.");
+            // System.out.println(path + " has been deleted.");
+            // System.out.println("Press any key to continue.");
             String line = scanner.nextLine();
         } else {
-            System.out.println(path + " couldn't be deleted.");
-            System.out.println("Press any key to continue.");
+            // System.out.println(path + " couldn't be deleted.");
+            // System.out.println("Press any key to continue.");
             String line = scanner.nextLine();
         }
     }

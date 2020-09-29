@@ -66,6 +66,8 @@ public class GameGUI extends JPanel {
     }
 
     public void move(String move) {
-        gameController.moveHero(move);
+        System.out.println(gameController.moveHero(move));
+        if (gameController.moveHero(move) == false)
+            guiController.displayMainMenuGUI(gameController);
     }
 }

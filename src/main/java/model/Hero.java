@@ -4,7 +4,7 @@ public class Hero implements java.io.Serializable {
     private String name;
     private String type;
     private int attack;
-    private int defence;
+    private int defense;
     private int totalHitpoints;
     private int currentHitpoints;
     private int level;
@@ -12,17 +12,29 @@ public class Hero implements java.io.Serializable {
     private int x;
     private int y;
 
-    public Hero(String name, String type, int attack, int defence, int hitpoints) {
+    public Hero(String name, String type, int attack, int defense, int hitpoints) {
         this.name = name;
         this.type = type;
         this.attack = attack;
-        this.defence = defence;
+        this.defense = defense;
         this.totalHitpoints = hitpoints;
         this.currentHitpoints = hitpoints;
         this.level = 1;
         this.experience = 0;
         this.x = 2;
         this.y = 2;
+    }
+
+    public int getTotalHitpoints() {
+        return totalHitpoints;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
+    public int getDefense() {
+        return defense;
     }
 
     public String getName() {
@@ -49,6 +61,10 @@ public class Hero implements java.io.Serializable {
         return y;
     }
 
+    public int getCurrentHitpoints() {
+        return currentHitpoints;
+    }
+
     public void setCurrentHitpoints(int currentHitpoints) {
         this.currentHitpoints = currentHitpoints;
     }
@@ -73,8 +89,8 @@ public class Hero implements java.io.Serializable {
         this.attack += attack;
     }
 
-    public void incrementDefence(int defence) {
-        this.defence += defence;
+    public void incrementDefence(int defense) {
+        this.defense += defense;
     }
 
     public void incrementTotalHitpoints(int hitpoints) {
@@ -114,7 +130,7 @@ public class Hero implements java.io.Serializable {
         return name + "," +
         type + "," +
         attack + "," +
-        defence + "," +
+                defense + "," +
         totalHitpoints + "," +
         currentHitpoints + "," +
         level + "," +
@@ -129,7 +145,7 @@ public class Hero implements java.io.Serializable {
         " name = '" + name + '\'' + 
         ", type = '" + type + '\'' + 
         ", attack = " + attack + 
-        ", defence = " + defence + 
+        ", defense = " + defense + 
         ", totalHitpoints = " + totalHitpoints + 
         ", currentHitpoints = " + currentHitpoints + 
         ", level = " + level + 

@@ -9,6 +9,7 @@ public class NewGameGUI extends JPanel {
     protected JTextField tfCharacterName;
     protected JComboBox<String> cbClasses;
     protected JLabel lblName;
+    protected JTextPane tpConsole;
     private GUIController guiController;
     private GameController gameController;
 
@@ -23,9 +24,12 @@ public class NewGameGUI extends JPanel {
         cbClasses = new JComboBox<>(classOptions);
         btnCreateCharacter = new JButton("Create Character");
         btnBack = new JButton("Back");
+        tpConsole = new JTextPane();
 
         lblName.setSize(80, 20);
         tfCharacterName.setColumns(5);
+        tpConsole.setEditable(false);
+        tpConsole.setSize(80, 80);
 
         this.add(lblName);
         this.add(tfCharacterName);
