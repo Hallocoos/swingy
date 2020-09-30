@@ -1,5 +1,4 @@
 view\MainMenuGUI$1.class
-model\DBCon.class
 view\GameGUI.class
 controller\GameController.class
 view\GameGUI$1.class

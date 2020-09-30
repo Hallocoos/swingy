@@ -1,16 +1,50 @@
 package model;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 public class Hero implements java.io.Serializable {
+    @NotNull
+    @NotBlank(message = "Hero name must not be blank")
     private String name;
+
+    @NotNull
+    @NotBlank(message = "Hero class must not be blank")
     private String type;
+
+    @NotNull
+    @Min(value = 0, message = "Attack cannot be lower than 0")
     private int attack;
+
+    @NotNull
+    @Min(value = 0, message = "Defense cannot be lower than 0")
     private int defense;
+
+    @NotNull
+    @Min(value = 0, message = "Total Health cannot be lower than 0")
     private int totalHitpoints;
+
     private int currentHitpoints;
+
+    @NotNull
+    @Min(value = 1, message = "Level cannot be lower than 1")
+    @Max(value = 4, message = "Level cannot be higher than 4")
     private int level;
+
+    @NotNull
+    @Min(value = 0, message = "Experience cannot be lower than 0")
     private int experience;
+
+    @NotNull
+    @Min(value = 0, message = "Edge of map exceeded")
     private int x;
+
+    @NotNull
+    @Min(value = 0, message = "Edge of map exceeded")
     private int y;
+
 
     public Hero(String name, String type, int attack, int defense, int hitpoints) {
         this.name = name;
