@@ -7,7 +7,6 @@ import javax.validation.constraints.NotNull;
 
 public class Hero implements java.io.Serializable {
     @NotNull
-    @NotBlank(message = "Hero name must not be blank")
     private String name;
 
     @NotNull
